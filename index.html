@@ -15,12 +15,16 @@
       </h1>
     </header>
     <main>
-      <h2 > "Player X wins:</h2>
-      <h2 id = "X"> 0 </h2>
-      
-      <h2 > "Player O wins:</h2>
-      <h2 id = "O"> 0 </h2>
-      
+      <div class="score">
+        <div class="player-x">
+      <h2 > Player X Victories</h2>
+      <h2 class="X" id = "X"> 0 </h2>
+    </div>
+    <div class="player-o">
+      <h2 > Player O Victories</h2>
+      <h2 class="O" id = "O"> 0 </h2>
+    </div>
+    </div>
         <div class="row">
             <div id="0_0" onclick="place(this)"></div>
             <div id="1_0" onclick="place(this)"></div>
@@ -37,7 +41,7 @@
             <div id="2_2" onclick="place(this)"></div>
           </div>
         </div>
-      <button id="reset" onclick= "reset()">Reset</button>
+      <button class="reset"id="reset" onclick= "reset()">Reset</button>
     </main>
   </body>
 </html>
