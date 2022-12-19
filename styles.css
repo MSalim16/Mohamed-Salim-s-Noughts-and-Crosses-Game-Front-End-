@@ -56,20 +56,26 @@ main {
   border-radius: 3px;
 }
 
-.box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid white;
-  font-weight: 700;
-  font-size: 2rem;
+.row div {
+  padding: 10px;
+  border: 3px solid white;
+  height: 75px;
+  width: 75px;
+  background-color: pink;
+  color: solid white;
+  text-align: center;
+  font-size: 32px;
+  float: left;
+}
+.row {
+  clear: both;
 }
 
-.winning-box {
+/* .winning-box {
   border: 1px solid white;
   background-color: white;
   box-shadow: 1rem 1rem 8rem white;
-}
+} */
 
 button {
   appearance: none;

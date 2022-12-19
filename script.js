@@ -1,11 +1,17 @@
-var currentPlayer = "O";
-var won = false;
+let currentPlayer = "O";
+let won = false;
+let xWins = 0;
+let oWins = 0;
+
 function place(box) {
   if (box.innerText != "" || won) return;
   box.innerText = currentPlayer;
   currentPlayer == "O" ? (currentPlayer = "X") : (currentPlayer = "O");
   checkGameBoard();
-}
+  if (won === true) {
+    
+  }
+  }
 function checkGameBoard() {
   for (var i = 0; i <= 2; i++) {
     checkWinner(
@@ -19,6 +25,7 @@ function checkGameBoard() {
       document.getElementById("2_" + i).innerText
     );
   }
+
   checkWinner(
     document.getElementById("0_0").innerText,
     document.getElementById("1_1").innerText,
@@ -32,7 +39,33 @@ function checkGameBoard() {
 }
 function checkWinner(first, second, third) {
   if (first != "" && first == second && first == third) {
-    alert("Winner!");
     won = true;
+    if (first === "O") {
+      alert("O is the winner!");
+      oWins += 1;
+      document.getElementById("O").innerHTML = oWins;
+      currentPlayer = "X";
+    } else{
+      alert("X is the winner!");
+      xWins += 1;
+      document.getElementById("X").innerHTML = xWins;
+      currentPlayer = "O";
+    }
+    reset();
   }
+}
+
+function reset() {
+  //resets all of the boxes to an empty string
+  //deletes X's and O's
+  //if box is empty the user is able to click on it
+  document.getElementById("0_0").innerText = "";
+  document.getElementById("0_1").innerText = "";
+  document.getElementById("0_2").innerText = "";
+  document.getElementById("1_0").innerText = "";
+  document.getElementById("1_1").innerText = "";
+  document.getElementById("1_2").innerText = "";
+  document.getElementById("2_0").innerText = "";
+  document.getElementById("2_1").innerText = "";
+  document.getElementById("2_2").innerText = "";
 }
