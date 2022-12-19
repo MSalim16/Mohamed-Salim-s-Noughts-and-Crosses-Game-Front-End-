@@ -8,9 +8,6 @@ function place(box) {
   box.innerText = currentPlayer;
   currentPlayer == "O" ? (currentPlayer = "X") : (currentPlayer = "O");
   checkGameBoard();
-  if (won === true) {
-    
-  }
   }
 function checkGameBoard() {
   for (var i = 0; i <= 2; i++) {
@@ -51,14 +48,11 @@ function checkWinner(first, second, third) {
       document.getElementById("X").innerHTML = xWins;
       currentPlayer = "O";
     }
-    reset();
   }
 }
 
 function reset() {
   //resets all of the boxes to an empty string
-  //deletes X's and O's
-  //if box is empty the user is able to click on it
   document.getElementById("0_0").innerText = "";
   document.getElementById("0_1").innerText = "";
   document.getElementById("0_2").innerText = "";
@@ -68,4 +62,5 @@ function reset() {
   document.getElementById("2_0").innerText = "";
   document.getElementById("2_1").innerText = "";
   document.getElementById("2_2").innerText = "";
+  won = false;
 }
