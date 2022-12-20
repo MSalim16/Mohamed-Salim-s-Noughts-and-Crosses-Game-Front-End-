@@ -1,6 +1,5 @@
 :root {
   --orange: #ce6200;
-  --dark-blue: #1b6bff;
   --blue: #0083d3;
 }
 
@@ -17,9 +16,29 @@ body {
   justify-content: center;
   margin: 0 auto;
   height: 100vh;
-  color: white;
-  background-color: rgb(211, 211, 211);
+  color: rgb(152, 200, 255);
   letter-spacing: 1px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ce6200+50,0083d3+50,0083d3+50 */
+  background: #ce6200; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #ce6200 50%,
+    #0083d3 50%,
+    #0083d3 50%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #ce6200 50%,
+    #0083d3 50%,
+    #0083d3 50%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ce6200 50%,
+    #0083d3 50%,
+    #0083d3 50%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce6200', endColorstr='#0083d3',GradientType=1 ); /* IE6-9 */
 }
 
 header {
@@ -41,7 +60,8 @@ main {
   justify-content: center;
   padding: 2rem 1.6rem;
   border: 6px solid;
-  border-image: linear-gradient(90deg, #1b6bff, #ce6200) 45;
+  background-color: #bebdbd;
+  border-color: #dfdfdf #dfdfdf;
 }
 
 .game-box {
@@ -55,11 +75,11 @@ main {
 
 .row div {
   padding: 10px;
-  border: 3px solid white;
+  border: 3px solid rgb(0, 0, 0);
   height: 75px;
   width: 75px;
   background-color: pink;
-  color: solid white;
+  color: solid rgb(0, 0, 0);
   text-align: center;
   font-size: 32px;
   float: left;
@@ -69,27 +89,26 @@ main {
 }
 
 button {
-  appearance: none;
-  border: none;
-  outline: none;
-  background: none;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #ffffff;
 }
 
 .reset {
   font-family: "Oswald", sans-serif;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 0.75rem 1.5rem;
   font-weight: 700;
   font-size: 1.125rem;
   border-radius: 7px;
-  background-color: rgb(150, 150, 150);
+  background-color: #0083d3;
   box-shadow: inset -5px -5px 10px white inset 5px 5px 10px white;
   margin-top: 50px;
   cursor: pointer;
 }
 
 .reset:hover {
-  background-color: #0083d3;
+  background-color: #ce6200;
 }
 
 span.nought {
@@ -115,15 +134,15 @@ h1 span {
 
 .row div {
   padding: 10px;
-  border: 3px solid rgb(255, 255, 255);
+  border: 3px solid #ffffff;
   height: 100px;
   width: 100px;
-  background-color: var(--blue);
+  background-color: #0083d3;
   color: rgb(255, 255, 255);
 }
 
 .row div:hover {
-  background-color: #00a2ff;
+  background-color: #ce6200;
 }
 
 .row {
@@ -146,6 +165,9 @@ h1 span {
   background: #f9a058;
   font-weight: 700;
   margin-right: 50px;
+  border-radius: 1px;
+  border-style: solid;
+  border-color: #0083d3;
 }
 
 .player-o {
@@ -156,6 +178,9 @@ h1 span {
   background: #a4dbf7;
   float: right;
   margin-left: 50px;
+  border-radius: 1px;
+  border-style: solid;
+  border-color: #ce6200;
 }
 
 .X {
