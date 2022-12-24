@@ -139,6 +139,7 @@ h1 span {
   width: 100px;
   background-color: #0083d3;
   color: rgb(255, 255, 255);
+  align-items: center;
 }
 
 .row div:hover {
