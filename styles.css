@@ -74,17 +74,6 @@ main {
   border-color: #dfdfdf #dfdfdf;
 }
 
-.row div {
-  padding: 10px;
-  border: 3px solid rgb(0, 0, 0);
-  height: 75px;
-  width: 75px;
-  background-color: pink;
-  color: solid rgb(0, 0, 0);
-  text-align: center;
-  font-size: 32px;
-  float: left;
-}
 .row {
   clear: both;
 }
@@ -145,24 +134,94 @@ h1 span {
   font-family: "Rammetto";
   cursor: pointer;
   font-size: 25px;
+  float: left;
 }
 
 @media only screen and (max-width: 730px) {
   .row div {
-    padding: 5px;
+    padding: 15px;
     height: 75px;
     width: 75px;
   }
+  .reset {
+    font-family: "Oswald", sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    border-radius: 7px;
+    background-color: #0083d3;
+    box-shadow: inset -5px -5px 10px white inset 5px 5px 10px white;
+    margin-top: 50px;
+    cursor: pointer;
+  }
 }
 
-@media only screen and (max-width: 578px) {
+@media only screen and (max-width: 580px) {
   .row div {
     padding: 5px;
     height: 50px;
     width: 50px;
   }
+
+  .main-title {
+    font-weight: 300;
+    font-size: 2rem;
+  }
 }
 
+@media only screen and (max-width: 425px) {
+  .row div {
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+    font-size: 15px;
+  }
+
+  .main-title {
+    font-weight: 300;
+    font-size: 1.9rem;
+  }
+
+  .reset {
+    font-family: "Oswald", sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 0.25rem 0.5rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    border-radius: 7px;
+    background-color: #0083d3;
+    box-shadow: inset -5px -5px 10px white inset 5px 5px 10px white;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 371px) {
+  .row div {
+    padding: 5px;
+    height: 32px;
+    width: 32px;
+    font-size: 10px;
+  }
+
+  .main-title {
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  .reset {
+    font-family: "Oswald", sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 0.25rem 0.5rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    border-radius: 7px;
+    background-color: #0083d3;
+    box-shadow: inset -5px -5px 10px white inset 5px 5px 10px white;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+}
 .row div:hover {
   background-color: #ce6200;
 }
