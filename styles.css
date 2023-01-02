@@ -3,6 +3,16 @@
   --blue: #0083d3;
 }
 
+@font-face {
+  font-family: "BOWL";
+  src: url(./fonts/BowlbyOneSC-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Rammetto";
+  src: url(./fonts//RammettoOne-Regular.ttf);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -62,15 +72,6 @@ main {
   border: 6px solid;
   background-color: #bebdbd;
   border-color: #dfdfdf #dfdfdf;
-}
-
-.game-box {
-  display: grid;
-  grid-template-columns: repeat(3, 4rem);
-  grid-template-rows: repeat(3, 4rem);
-  position: relative;
-  padding: 4rem 0;
-  border-radius: 3px;
 }
 
 .row div {
@@ -133,13 +134,33 @@ h1 span {
 }
 
 .row div {
-  padding: 10px;
+  padding: 25px;
   border: 3px solid #ffffff;
   height: 100px;
   width: 100px;
   background-color: #0083d3;
   color: rgb(255, 255, 255);
   align-items: center;
+  text-align: center;
+  font-family: "Rammetto";
+  cursor: pointer;
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 730px) {
+  .row div {
+    padding: 5px;
+    height: 75px;
+    width: 75px;
+  }
+}
+
+@media only screen and (max-width: 578px) {
+  .row div {
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+  }
 }
 
 .row div:hover {
@@ -182,11 +203,4 @@ h1 span {
   border-radius: 1px;
   border-style: solid;
   border-color: #ce6200;
-}
-
-.X {
-  align-items: center;
-}
-.O {
-  align-items: center;
 }
