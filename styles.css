@@ -101,6 +101,9 @@ button {
   background-color: #ce6200;
 }
 
+.reset:active {
+  transform: scale(0.97);
+}
 span.nought {
   color: #0083d3;
   background: #a4dbf7;
@@ -139,6 +142,9 @@ h1 span {
 
 .row div:hover {
   background-color: #ce6200;
+}
+.row div:active {
+  transform: scale(0.97);
 }
 
 .row {
