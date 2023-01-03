@@ -296,3 +296,7 @@ h1 span {
     width: 90%;
   }
 }
+
+#mode-label {
+  color: black;
+}

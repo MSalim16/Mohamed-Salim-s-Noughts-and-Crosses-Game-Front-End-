@@ -2,13 +2,37 @@ let currentPlayer = "O";
 let won = false;
 let xWins = 0;
 let oWins = 0;
+const cells = {}
+let availableCells = []
+let mode = "twoPlayer"
+
+function changeMode() {
+  mode = (mode === "twoPlayer" ? "onePlayer" : "twoPlayer")
+  console.log(mode)
+}
+
+function updateCells() {
+  [...document.getElementsByClassName("grid-item")].forEach((item) => {
+    cells[item.id] = item.innerText
+  })
+  availableCells = [...document.getElementsByClassName("grid-item")].filter((gridSpace) => {
+    return gridSpace.innerText === ""
+  })
+}
 
 function place(box) {
+  console.log(box)
   if (box.innerText != "" || won) return;
   box.innerText = currentPlayer;
   currentPlayer == "O" ? (currentPlayer = "X") : (currentPlayer = "O");
+  updateCells()
   checkGameBoard();
+  if (mode === "onePlayer" && currentPlayer === "X") {
+    const aiChoice = availableCells[Math.floor(Math.random() * availableCells.length)]
+    place(aiChoice)
+  }
 }
+
 function checkGameBoard() {
   for (var i = 0; i <= 2; i++) {
     checkWinner(
@@ -75,5 +99,6 @@ function reset() {
   document.getElementById("2_0").innerText = "";
   document.getElementById("2_1").innerText = "";
   document.getElementById("2_2").innerText = "";
+  updateCells()
   won = false;
 }
