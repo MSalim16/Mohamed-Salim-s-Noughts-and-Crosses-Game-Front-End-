@@ -87,8 +87,16 @@ function checkWinner(first, second, third) {
         document.getElementById("X").innerHTML = xWins;
         currentPlayer = "O";
       }
-     
+      
+      
+      if (won = false && document.getElementsByClassName("grid-item").innerHTML != "")
+
+        
+      {
+        window.confirm(`It was a draw! Reset board?`);
+      }
       //resets all of the boxes to an empty string
+    
     }
   }
 }
@@ -108,8 +116,3 @@ function reset() {
   won = false;
 }
 
-const btn = document.getElementById("btn");
-
-btn.addEventListener("click", () => {
-  btn.innerText === "Two Player";
-});
