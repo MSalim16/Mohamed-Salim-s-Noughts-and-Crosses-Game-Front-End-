@@ -99,5 +99,6 @@ function reset() {
   document.getElementById("2_0").innerText = "";
   document.getElementById("2_1").innerText = "";
   document.getElementById("2_2").innerText = "";
+  updateCells()
   won = false;
 }
