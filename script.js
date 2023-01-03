@@ -89,13 +89,8 @@ function checkWinner(first, second, third) {
       }
       
       
-      if (won = false && document.getElementsByClassName("grid-item").innerHTML != "")
 
-        
-      {
-        window.confirm(`It was a draw! Reset board?`);
-      }
-      //resets all of the boxes to an empty string
+    
     
     }
   }
