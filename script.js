@@ -2,34 +2,37 @@ let currentPlayer = "O";
 let won = false;
 let xWins = 0;
 let oWins = 0;
-const cells = {}
-let availableCells = []
-let mode = "twoPlayer"
+const cells = {};
+let availableCells = [];
+let mode = "twoPlayer";
 
 function changeMode() {
-  mode = (mode === "twoPlayer" ? "onePlayer" : "twoPlayer")
-  console.log(mode)
+  mode = mode === "twoPlayer" ? "onePlayer" : "twoPlayer";
+  console.log(mode);
 }
 
 function updateCells() {
   [...document.getElementsByClassName("grid-item")].forEach((item) => {
-    cells[item.id] = item.innerText
-  })
-  availableCells = [...document.getElementsByClassName("grid-item")].filter((gridSpace) => {
-    return gridSpace.innerText === ""
-  })
+    cells[item.id] = item.innerText;
+  });
+  availableCells = [...document.getElementsByClassName("grid-item")].filter(
+    (gridSpace) => {
+      return gridSpace.innerText === "";
+    }
+  );
 }
 
 function place(box) {
-  console.log(box)
+  console.log(box);
   if (box.innerText != "" || won) return;
   box.innerText = currentPlayer;
   currentPlayer == "O" ? (currentPlayer = "X") : (currentPlayer = "O");
-  updateCells()
+  updateCells();
   checkGameBoard();
   if (mode === "onePlayer" && currentPlayer === "X") {
-    const aiChoice = availableCells[Math.floor(Math.random() * availableCells.length)]
-    place(aiChoice)
+    const aiChoice =
+      availableCells[Math.floor(Math.random() * availableCells.length)];
+    place(aiChoice);
   }
 }
 
@@ -84,6 +87,8 @@ function checkWinner(first, second, third) {
         document.getElementById("X").innerHTML = xWins;
         currentPlayer = "O";
       }
+     
+      //resets all of the boxes to an empty string
     }
   }
 }
@@ -99,6 +104,12 @@ function reset() {
   document.getElementById("2_0").innerText = "";
   document.getElementById("2_1").innerText = "";
   document.getElementById("2_2").innerText = "";
-  updateCells()
+  updateCells();
   won = false;
 }
+
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", () => {
+  btn.innerText === "Two Player";
+});

@@ -93,8 +93,9 @@ button {
   border-radius: 7px;
   background-color: #0083d3;
   box-shadow: inset -5px -5px 10px white inset 5px 5px 10px white;
-  margin-top: 50px;
+  margin-top: 40px;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .reset:hover {
@@ -184,6 +185,27 @@ h1 span {
   border-style: solid;
   border-color: #ce6200;
 }
+
+.switch {
+  font-family: "Oswald", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ce6200;
+}
+.switch:active {
+  transform: scale(0.95);
+  background-color: #0083d3;
+}
+
+.but {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* MEDIA QUERIES FOR MOBILE VIEW */
 @media only screen and (max-width: 730px) {
   .row div {
@@ -229,7 +251,7 @@ h1 span {
 
 @media only screen and (max-width: 425px) {
   .row div {
-    padding: 15px;
+    padding: 18px;
     height: 75px;
     width: 75px;
     font-size: 20px;
@@ -261,10 +283,10 @@ h1 span {
 
 @media only screen and (max-width: 371px) {
   .row div {
-    padding: 5px;
+    padding: 15px;
     height: 70px;
     width: 70px;
-    font-size: 10px;
+    font-size: 20px;
   }
 
   .main-title {
@@ -295,8 +317,4 @@ h1 span {
     height: 70%;
     width: 90%;
   }
-}
-
-#mode-label {
-  color: black;
 }
