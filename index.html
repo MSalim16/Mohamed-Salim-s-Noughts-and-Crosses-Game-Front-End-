@@ -26,22 +26,24 @@
     </div>
     </div>
         <div class="row">
-            <div id="0_0" onclick="place(this)"></div> 
-            <div id="1_0" onclick="place(this)"></div>
-            <div id="2_0" onclick="place(this)"></div>
+            <div id="0_0" class="grid-item" onclick="place(this)"></div> 
+            <div id="1_0" class="grid-item" onclick="place(this)"></div>
+            <div id="2_0" class="grid-item" onclick="place(this)"></div>
           </div>
           <div class="row">
-            <div id="0_1" onclick="place(this)"></div>
-            <div id="1_1" onclick="place(this)"></div>
-            <div id="2_1" onclick="place(this)"></div>
+            <div id="0_1" class="grid-item" onclick="place(this)"></div>
+            <div id="1_1" class="grid-item" onclick="place(this)"></div>
+            <div id="2_1" class="grid-item" onclick="place(this)"></div>
           </div>
           <div class="row">
-            <div id="0_2" onclick="place(this)"></div>
-            <div id="1_2" onclick="place(this)"></div>
-            <div id="2_2" onclick="place(this)"></div>
+            <div id="0_2" class="grid-item" onclick="place(this)"></div>
+            <div id="1_2" class="grid-item" onclick="place(this)"></div>
+            <div id="2_2" class="grid-item" onclick="place(this)"></div>
           </div>
         </div>
       <button class="reset"id="reset" onclick= "reset()">Reset</button>
+      <input type="checkbox" id="mode-switch" onChange="changeMode()" checked="false">
+      <label for="mode-switch" id="mode-label">One player mode</label>
     </main>
   </body>
 </html>
