@@ -38,17 +38,29 @@ function checkWinner(first, second, third) {
   if (first != "" && first == second && first == third) {
     won = true;
     if (first === "O") {
-      alert("O is the winner, do you want to reset the board?");
-      oWins += 1;
-      document.getElementById("O").innerHTML = oWins;
-      currentPlayer = "X";
+      if (window.confirm("O is the winner, do you want to reset the board?")) {
+        oWins += 1;
+        document.getElementById("O").innerHTML = oWins;
+        currentPlayer = "X";
+
+        reset();
+      } else {
+        oWins += 1;
+        document.getElementById("O").innerHTML = oWins;
+        currentPlayer = "X";
+      }
     } else {
-      alert("X is the winner, do you want to reset the board?");
-      xWins += 1;
-      document.getElementById("X").innerHTML = xWins;
-      currentPlayer = "O";
+      if (window.confirm("X is the winner, do you want to reset the board?")) {
+        xWins += 1;
+        document.getElementById("X").innerHTML = xWins;
+        currentPlayer = "O";
+        reset();
+      } else {
+        xWins += 1;
+        document.getElementById("X").innerHTML = xWins;
+        currentPlayer = "O";
+      }
     }
-    reset();
   }
 }
 

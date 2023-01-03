@@ -137,91 +137,6 @@ h1 span {
   float: left;
 }
 
-@media only screen and (max-width: 730px) {
-  .row div {
-    padding: 15px;
-    height: 75px;
-    width: 75px;
-  }
-  .reset {
-    font-family: "Oswald", sans-serif;
-    color: rgb(255, 255, 255);
-    padding: 0.5rem 1rem;
-    font-weight: 700;
-    font-size: 1.125rem;
-    border-radius: 7px;
-    background-color: #0083d3;
-    box-shadow: inset -5px -5px 10px white inset 5px 5px 10px white;
-    margin-top: 50px;
-    cursor: pointer;
-  }
-}
-
-@media only screen and (max-width: 580px) {
-  .row div {
-    padding: 5px;
-    height: 50px;
-    width: 50px;
-  }
-
-  .main-title {
-    font-weight: 300;
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .row div {
-    padding: 5px;
-    height: 40px;
-    width: 40px;
-    font-size: 15px;
-  }
-
-  .main-title {
-    font-weight: 300;
-    font-size: 1.9rem;
-  }
-
-  .reset {
-    font-family: "Oswald", sans-serif;
-    color: rgb(255, 255, 255);
-    padding: 0.25rem 0.5rem;
-    font-weight: 700;
-    font-size: 1.125rem;
-    border-radius: 7px;
-    background-color: #0083d3;
-    box-shadow: inset -5px -5px 10px white inset 5px 5px 10px white;
-    margin-top: 50px;
-    cursor: pointer;
-  }
-}
-
-@media only screen and (max-width: 371px) {
-  .row div {
-    padding: 5px;
-    height: 32px;
-    width: 32px;
-    font-size: 10px;
-  }
-
-  .main-title {
-    font-weight: 300;
-    font-size: 1.5rem;
-  }
-  .reset {
-    font-family: "Oswald", sans-serif;
-    color: rgb(255, 255, 255);
-    padding: 0.25rem 0.5rem;
-    font-weight: 700;
-    font-size: 1.125rem;
-    border-radius: 7px;
-    background-color: #0083d3;
-    box-shadow: inset -5px -5px 10px white inset 5px 5px 10px white;
-    margin-top: 50px;
-    cursor: pointer;
-  }
-}
 .row div:hover {
   background-color: #ce6200;
 }
@@ -262,4 +177,112 @@ h1 span {
   border-radius: 1px;
   border-style: solid;
   border-color: #ce6200;
+}
+/* MEDIA QUERIES FOR MOBILE VIEW */
+@media only screen and (max-width: 730px) {
+  .row div {
+    padding: 15px;
+    height: 75px;
+    width: 75px;
+  }
+  .main-title {
+    font-weight: 300;
+    font-size: 2.5rem;
+  }
+
+  .reset {
+    font-family: "Oswald", sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    border-radius: 7px;
+    background-color: #0083d3;
+    box-shadow: inset -5px -5px 10px white inset 5px 5px 10px white;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .row div {
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .main-title {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .row div {
+    padding: 15px;
+    height: 75px;
+    width: 75px;
+    font-size: 20px;
+  }
+
+  .main-title {
+    font-weight: 300;
+    font-size: 1.7rem;
+  }
+
+  .reset {
+    font-family: "Oswald", sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 0.25rem 0.5rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    border-radius: 7px;
+    background-color: #0083d3;
+    box-shadow: inset -5px -5px 10px white inset 5px 5px 10px white;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+
+  main {
+    height: 70%;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 371px) {
+  .row div {
+    padding: 5px;
+    height: 70px;
+    width: 70px;
+    font-size: 10px;
+  }
+
+  .main-title {
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  .reset {
+    font-family: "Oswald", sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 0.25rem 0.5rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    border-radius: 7px;
+    background-color: #0083d3;
+    box-shadow: inset -5px -5px 10px white inset 5px 5px 10px white;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+
+  .score {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: top;
+    padding-bottom: 80px;
+  }
+  main {
+    height: 70%;
+    width: 90%;
+  }
 }
