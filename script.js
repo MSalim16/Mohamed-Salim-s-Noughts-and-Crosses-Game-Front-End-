@@ -19,14 +19,6 @@ function changeMode() {
 
 }
 
-function changeTurn(){
-  if (mode === "onePlayer" || "twoPlayer" && currentPlayer === "O"){
-    document.getElementById("p1").innerHTML = "It is O's turn"; 
-  }else{document.getElementById("p1").innerHTML = "It is X's turn";
-
-  }
-
-}
 
 function updateCells() {
   [...document.getElementsByClassName("grid-item")].forEach((item) => {
@@ -46,11 +38,29 @@ function place(box) {
   currentPlayer == "O" ? (currentPlayer = "X") : (currentPlayer = "O");
   updateCells();
   checkGameBoard();
-  if (mode === "onePlayer" && currentPlayer === "X") {
+  if (mode === "onePlayer"  && currentPlayer === "X") {
     const aiChoice =
       availableCells[Math.floor(Math.random() * availableCells.length)];
     place(aiChoice);
   }
+if(mode === "twoPlayer" && currentPlayer === "X"){
+    document.getElementById("p1").innerHTML = "It is X's turn"
+
+}
+if(mode === "twoPlayer" && currentPlayer === "O"){
+  document.getElementById("p1").innerHTML = "It is O's turn"
+}
+
+
+if(mode === "onePlayer" && currentPlayer === "X"){
+  document.getElementById("p1").innerHTML = "It is X's turn"
+
+  if(mode === "onePlayer" && currentPlayer === "O"){
+    document.getElementById("p1").innerHTML = "It is O's turn"
+  }
+  
+
+}
 }
 
 function checkGameBoard() {
