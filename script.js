@@ -9,6 +9,23 @@ let mode = "twoPlayer";
 function changeMode() {
   mode = mode === "twoPlayer" ? "onePlayer" : "twoPlayer";
   console.log(mode);
+
+    if(mode === "onePlayer")
+    {document.getElementById("btn").innerHTML = "Two Player Mode"
+    } else{
+      document.getElementById("btn").innerHTML = "One Player Mode"
+    }
+    
+
+}
+
+function changeTurn(){
+  if (mode === "onePlayer" || "twoPlayer" && currentPlayer === "O"){
+    document.getElementById("p1").innerHTML = "It is O's turn"; 
+  }else{document.getElementById("p1").innerHTML = "It is X's turn";
+
+  }
+
 }
 
 function updateCells() {
@@ -30,10 +47,11 @@ function place(box) {
   updateCells();
   checkGameBoard();
   if (mode === "onePlayer" && currentPlayer === "X") {
+    document.getElementById("playerturn") = "It is X's turn"
     const aiChoice =
       availableCells[Math.floor(Math.random() * availableCells.length)];
     place(aiChoice);
-  }
+  }else{}
 }
 
 function checkGameBoard() {
@@ -110,4 +128,3 @@ function reset() {
   updateCells();
   won = false;
 }
-
