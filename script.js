@@ -47,11 +47,10 @@ function place(box) {
   updateCells();
   checkGameBoard();
   if (mode === "onePlayer" && currentPlayer === "X") {
-    document.getElementById("playerturn") = "It is X's turn"
     const aiChoice =
       availableCells[Math.floor(Math.random() * availableCells.length)];
     place(aiChoice);
-  }else{}
+  }
 }
 
 function checkGameBoard() {
