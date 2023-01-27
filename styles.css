@@ -59,6 +59,7 @@ header {
 .main-title {
   font-weight: 300;
   font-size: 3rem;
+  color: white;
 }
 
 main {
@@ -206,9 +207,7 @@ h1 span {
   align-items: center;
 }
 
-
-
-.p2{
+.p2 {
   background: #ce6200;
   color: #ffffff;
   padding: 0 8px;
@@ -220,17 +219,6 @@ h1 span {
   border-radius: 5px;
   border-color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* MEDIA QUERIES FOR MOBILE VIEW */
 
